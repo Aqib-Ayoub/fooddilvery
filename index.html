@@ -26,10 +26,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+PL:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!--Title-->
     <title>Foodilvery</title>
   </head>
@@ -128,8 +139,8 @@
       <!-- Left Content -->
       <div class="md:w-1/2 space-y-6">
         <!-- Heading -->
-        <h1 class="text-5xl font-bold leading-tight">
-          Hungry? Let’s Deliver Happiness to Your
+        <h1 class="text-5xl font-bold leading-tight italic font-[Playwrite]">
+          Hungry? Let’s Deliver Happiness to Your <br />
           <span class="text-[#ff5c40]">Doorstep!</span>
         </h1>
 
@@ -194,7 +205,7 @@
     <!-- End Hero section-->
     <!-- popular resturants -->
     <div class="bg-gray-100 m-10 rounded-[25px] p-10">
-      <h1 class="text-center text-xl font-semibold mb-6">Nearby Resturants</h1>
+      <h1 class="text-center text-[25px] font-bold mb-6">Nearby Resturants</h1>
       <div class="flex flex-row justify-between">
         <img class="w-15" src="./img/restaurant1.png" alt="img1" />
         <img class="w-15" src="./img/restaurant2.png" alt="img3" />
@@ -205,31 +216,153 @@
     </div>
     <!--end popular resturants -->
     <!--Top food categories-->
-    <div class="flex flex-row bg-gray-100 roundex-[25px] justify-between p-10">
-      <div>
-        <h1>Top Foods Categories</h1>
+    <div class="flex flex-col bg-gray-100 rounded-[25px] p-10 m-10">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="font-bold text-[25px]">Top Foods Categories</h1>
+        </div>
+        <div class="flex">
+          <ul class="flex gap-4">
+            <li
+              class="border border-[#fa6e69] text-[#fa6e69] px-3 py-1 rounded-xl"
+            >
+              <a href="">All</a>
+            </li>
+            <li class="border border-gray-200 px-3 py-1 rounded-xl">
+              <a href="">Healthy</a>
+            </li>
+            <li class="border border-gray-200 px-3 py-1 rounded-xl">
+              <a href="">italian</a>
+            </li>
+            <li class="border border-gray-200 px-3 py-1 rounded-xl">
+              <a href="">Asian</a>
+            </li>
+            <li class="border border-gray-200 px-3 py-1 rounded-xl">
+              <a href="">Mexican</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="flex flex-row">
-        <ul class="flex gap-4">
-          <li class="border border-gray-200">
-            <a href="">All</a>
-          </li>
-          <li class="">
-            <a href="">Healthy</a>
-          </li>
-          <li class="">
-            <a href="">italian</a>
-          </li>
-          <li class="">
-            <a href="">Asian</a>
-          </li>
-          <li class="">
-            <a href="">Mexican</a>
-          </li>
-        </ul>
+      <div class="relative mt-10">
+        <!-- Left Scroll Button -->
+        <button
+          id="scrollLeft"
+          class="absolute left-0 top-1/2 -translate-y-1/2 bg-[#fe9367] p-2 rounded-full shadow z-10 text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="18"
+            height="18"
+          >
+            <path
+              d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Scrollable Container -->
+        <div
+          id="scrollContainer"
+          class="flex overflow-x-hidden space-x-4 scrollbar-none scroll-smooth px-10"
+        >
+          <!-- Restaurant Cards -->
+          <div class="flex flex-col flex-shrink-0 w-[250px]">
+            <div
+              class="relative aspect-[4/3] bg-[url('./img/cat4.jpg')] bg-no-repeat bg-cover rounded-[25px]"
+            >
+              <button
+                class="absolute bottom-3 left-3 w-fit px-3 py-2 bg-[#fe9367] rounded-[25px] text-white whitespace-nowrap text-[14px]"
+              >
+                12 Restaurants Products
+              </button>
+            </div>
+            <h1 class="pt-4 font-bold text-gray-600 text-[14px]">Pizza</h1>
+          </div>
+
+          <div class="flex flex-col flex-shrink-0 w-[250px]">
+            <div
+              class="relative aspect-[4/3] bg-[url('./img/cat1.jpg')] bg-no-repeat bg-cover rounded-[25px]"
+            >
+              <button
+                class="absolute bottom-3 left-3 w-fit px-3 py-2 bg-[#fe9367] rounded-[25px] text-white whitespace-nowrap text-[14px]"
+              >
+                12 Restaurants Products
+              </button>
+            </div>
+            <h1 class="pt-4 font-bold text-gray-600 text-[14px]">Broast</h1>
+          </div>
+
+          <div class="flex flex-col flex-shrink-0 w-[250px]">
+            <div
+              class="relative aspect-[4/3] bg-[url('./img/cat2.jpg')] bg-no-repeat bg-cover rounded-[25px]"
+            >
+              <button
+                class="absolute bottom-3 left-3 w-fit px-3 py-2 bg-[#fe9367] rounded-[25px] text-white whitespace-nowrap text-[14px]"
+              >
+                12 Restaurants Products
+              </button>
+            </div>
+            <h1 class="pt-4 font-bold text-gray-600 text-[14px]">Chicken</h1>
+          </div>
+
+          <div class="flex flex-col flex-shrink-0 w-[250px]">
+            <div
+              class="relative aspect-[4/3] bg-[url('./img/cat3.jpg')] bg-no-repeat bg-cover rounded-[25px]"
+            >
+              <button
+                class="absolute bottom-3 left-3 w-fit px-3 py-2 bg-[#fe9367] rounded-[25px] text-white whitespace-nowrap text-[14px]"
+              >
+                12 Restaurants Products
+              </button>
+            </div>
+            <h1 class="pt-4 font-bold text-gray-600 text-[14px]">Burger</h1>
+          </div>
+
+          <div class="flex flex-col flex-shrink-0 w-[250px]">
+            <div
+              class="relative aspect-[4/3] bg-[url('./img/cat3.jpg')] bg-no-repeat bg-cover rounded-[25px]"
+            >
+              <button
+                class="absolute bottom-3 left-3 w-fit px-3 py-2 bg-[#fe9367] rounded-[25px] text-white whitespace-nowrap text-[14px]"
+              >
+                12 Restaurants Products
+              </button>
+            </div>
+            <h1 class="pt-4 font-bold text-gray-600 text-[14px]">Burger</h1>
+          </div>
+        </div>
+
+        <!-- Right Scroll Button -->
+        <button
+          id="scrollRight"
+          class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#fe9367] p-2 rounded-full shadow z-10 text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="currentColor"
+          >
+            <path
+              d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
 
     <!--End Top food categories-->
+    <script>
+      const scrollContainer = document.getElementById("scrollContainer");
+      document.getElementById("scrollLeft").addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: -250, behavior: "smooth" });
+      });
+      document.getElementById("scrollRight").addEventListener("click", () => {
+        scrollContainer.scrollBy({ left: 250, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>
